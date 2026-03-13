@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { LanguageProvider, useLang } from "@/context/LanguageContext";
 import { LANGUAGES, t } from "@/lib/translations";
@@ -80,6 +80,32 @@ function LanguageSwitcher() {
   );
 }
 
+
+function LogoutButton({ lang }: { lang: string }) {
+  const router = useRouter();
+  const labels: Record<string, string> = {
+    en:"🚪 Logout", hi:"🚪 लॉगआउट", mr:"🚪 लॉगआउट", pa:"🚪 ਲੌਗਆਉਟ",
+    gu:"🚪 લૉગ આઉટ", ta:"🚪 வெளியேறு", te:"🚪 లాగ్‌అవుట్",
+    kn:"🚪 ಲಾಗ್‌ಔಟ್", bn:"🚪 লগআউট", ar:"🚪 تسجيل الخروج",
+  };
+  return (
+    <div
+      onClick={() => router.push("/")}
+      style={{
+        display: "flex", alignItems: "center", gap: 10,
+        padding: "10px 12px", borderRadius: 12, marginBottom: 2,
+        fontSize: 13, color: "rgba(255,100,100,0.75)", cursor: "pointer",
+        transition: "all 0.2s",
+      }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(255,80,80,0.12)"; (e.currentTarget as HTMLElement).style.color = "#fc8181"; }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; (e.currentTarget as HTMLElement).style.color = "rgba(255,100,100,0.75)"; }}
+    >
+      <span style={{ fontSize: 16 }}>🚪</span>
+      {labels[lang] || labels.en}
+    </div>
+  );
+}
+
 function FarmerSidebar() {
   const path = usePathname();
   const { lang } = useLang();
@@ -141,6 +167,7 @@ function FarmerSidebar() {
             </div>
           </Link>
         ))}
+        <LogoutButton lang={lang} />
       </nav>
 
       {/* Language Switcher */}

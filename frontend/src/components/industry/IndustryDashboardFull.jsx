@@ -239,6 +239,20 @@ function Sidebar({page,setPage,lang,setLang}){
           );
         })}
       </nav>
+
+      {/* Logout button */}
+      <div style={{padding:"6px 10px",position:"relative",zIndex:1}}>
+        <div
+          onClick={()=>{ if(typeof window!=="undefined") window.location.href="/"; }}
+          style={{display:"flex",alignItems:"center",gap:9,padding:"9px 11px",borderRadius:11,fontSize:12,fontWeight:500,color:"rgba(255,100,100,0.7)",cursor:"pointer",transition:"all .15s"}}
+          onMouseEnter={e=>{e.currentTarget.style.background="rgba(255,80,80,0.12)";e.currentTarget.style.color="#fc8181";}}
+          onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color="rgba(255,100,100,0.7)";}}
+        >
+          <span style={{fontSize:15}}>🚪</span>
+          <span style={{flex:1}}>{({"en":"Logout","hi":"लॉगआउट","mr":"लॉगआउट","pa":"ਲੌਗਆਉਟ","gu":"લૉગ આઉટ","ta":"வெளியேறு","te":"లాగ్‌అవుట్","kn":"ಲಾಗ್‌ಔಟ್","bn":"লগআউট","ar":"تسجيل الخروج"})[lang]||"Logout"}</span>
+        </div>
+      </div>
+
       <div style={{padding:12,borderTop:"1px solid rgba(255,255,255,.06)",position:"relative",zIndex:1}}>
         <div style={{background:"rgba(255,255,255,.05)",borderRadius:13,padding:13,border:"1px solid rgba(255,255,255,.06)"}}>
           <div style={{fontSize:11,fontWeight:700,color:"#fff",marginBottom:3}}>Sourcing Expert Online</div>
