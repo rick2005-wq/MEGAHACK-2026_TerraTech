@@ -20,6 +20,29 @@ input,textarea,select,button{font-family:'DM Sans',sans-serif;}
 `;
 
 /* ─── DATA ─── */
+
+/* ─── i18n ─── */
+const LANGUAGES=[
+  {code:"en",native:"English",flag:"🇬🇧"},{code:"hi",native:"हिन्दी",flag:"🇮🇳"},
+  {code:"mr",native:"मराठी",flag:"🇮🇳"},{code:"pa",native:"ਪੰਜਾਬੀ",flag:"🇮🇳"},
+  {code:"gu",native:"ગુજરાતી",flag:"🇮🇳"},{code:"ta",native:"தமிழ்",flag:"🇮🇳"},
+  {code:"te",native:"తెలుగు",flag:"🇮🇳"},{code:"kn",native:"ಕನ್ನಡ",flag:"🇮🇳"},
+  {code:"bn",native:"বাংলা",flag:"🇮🇳"},{code:"ar",native:"العربية",flag:"🇸🇦"},
+];
+const TT={
+  dashboard:     {en:"Dashboard",hi:"डैशबोर्ड",mr:"डॅशबोर्ड",pa:"ਡੈਸ਼ਬੋਰਡ",gu:"ડૅશબોર્ડ",ta:"டாஷ்போர்ட்",te:"డాష్‌బోర్డ్",kn:"ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",bn:"ড্যাশবোর্ড",ar:"لوحة القيادة"},
+  browse:        {en:"Browse Listings",hi:"लिस्टिंग ब्राउज़",mr:"लिस्टिंग ब्राउझ",pa:"ਲਿਸਟਿੰਗ ਬ੍ਰਾਊਜ਼",gu:"લિસ્ટિંગ બ્રાઉઝ",ta:"பட்டியல்களை உலாவுக",te:"జాబితాలు చూడు",kn:"ಪಟ್ಟಿಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ",bn:"তালিকা দেখুন",ar:"تصفح القوائم"},
+  tenders:       {en:"My Tenders",hi:"मेरे टेंडर",mr:"माझे टेंडर",pa:"ਮੇਰੇ ਟੈਂਡਰ",gu:"મારા ટેન્ડર",ta:"என் டெண்டர்கள்",te:"నా టెండర్లు",kn:"ನನ್ನ ಟೆಂಡರ್‌ಗಳು",bn:"আমার টেন্ডার",ar:"مناقصاتي"},
+  bids:          {en:"Bids Received",hi:"बोलियाँ प्राप्त",mr:"बोली मिळाल्या",pa:"ਬੋਲੀਆਂ ਪ੍ਰਾਪਤ",gu:"બોલીઓ મળી",ta:"ஏலங்கள் பெற்றன",te:"బిడ్‌లు అందాయి",kn:"ಬಿಡ್‌ಗಳು ಸ್ವೀಕರಿಸಿದವು",bn:"বিড পাওয়া গেছে",ar:"العطاءات المستلمة"},
+  farmers:       {en:"My Farmers",hi:"मेरे किसान",mr:"माझे शेतकरी",pa:"ਮੇਰੇ ਕਿਸਾਨ",gu:"મારા ખેડૂત",ta:"என் விவசாயிகள்",te:"నా రైతులు",kn:"ನನ್ನ ರೈತರು",bn:"আমার কৃষকরা",ar:"مزارعوي"},
+  messages:      {en:"Messages",hi:"संदेश",mr:"संदेश",pa:"ਸੁਨੇਹੇ",gu:"સંદેશ",ta:"செய்திகள்",te:"సందేశాలు",kn:"ಸಂದೇಶಗಳು",bn:"বার্তা",ar:"الرسائل"},
+  payments:      {en:"Payments",hi:"भुगतान",mr:"पेमेंट",pa:"ਭੁਗਤਾਨ",gu:"ચુકવણી",ta:"கொடுப்பனவுகள்",te:"చెల్లింపులు",kn:"ಪಾವತಿಗಳు",bn:"পেমেন্ট",ar:"المدفوعات"},
+  analytics:     {en:"Analytics",hi:"विश्लेषण",mr:"विश्लेषण",pa:"ਵਿਸ਼ਲੇਸ਼ਣ",gu:"વિશ્લેષણ",ta:"பகுப்பாய்வு",te:"విశ్లేషణలు",kn:"ವಿಶ್ಲೇಷಣೆ",bn:"বিশ্লেষণ",ar:"التحليلات"},
+  settings:      {en:"Settings",hi:"सेटिंग्स",mr:"सेटिंग्ज",pa:"ਸੈਟਿੰਗਜ਼",gu:"સેટિંગ્સ",ta:"அமைப்புகள்",te:"సెట్టింగులు",kn:"ಸೆಟ್ಟಿಂಗ್‌ಗಳు",bn:"সেটিংস",ar:"الإعدادات"},
+  language:      {en:"Language",hi:"भाषा",mr:"भाषा",pa:"ਭਾਸ਼ਾ",gu:"ભાષા",ta:"மொழி",te:"భాష",kn:"ಭಾಷೆ",bn:"ভাষা",ar:"اللغة"},
+};
+const tt=(key,lang)=>TT[key]?.[lang]||TT[key]?.en||key;
+
 const TICKER=[
   {n:"Wheat",p:"₹28/kg",c:"+0.8%",up:true},{n:"Potato",p:"₹22/kg",c:"+4.2%",up:true},
   {n:"Onion",p:"₹14/kg",c:"-1.8%",up:false},{n:"Corn",p:"₹18/kg",c:"+2.1%",up:true},
@@ -156,7 +179,8 @@ const NAV_ITEMS=[
   {id:"settings",icon:"⚙️",label:"Settings"},
 ];
 
-function Sidebar({page,setPage}){
+function Sidebar({page,setPage,lang,setLang}){
+  const [langOpen,setLangOpen]=useState(false);
   return(
     <aside style={{width:224,background:navy,display:"flex",flexDirection:"column",position:"fixed",top:0,left:0,bottom:0,zIndex:50,overflowY:"auto"}}>
       <div style={{position:"absolute",inset:0,backgroundImage:"radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px)",backgroundSize:"18px 18px",pointerEvents:"none"}}/>
@@ -176,12 +200,13 @@ function Sidebar({page,setPage}){
       </div>
       <nav style={{flex:1,padding:"10px 10px",position:"relative",zIndex:1}}>
         <div style={{fontSize:9,letterSpacing:"1.2px",textTransform:"uppercase",color:"rgba(255,255,255,.22)",padding:"8px 8px 4px",fontWeight:600}}>Menu</div>
-        {NAV_ITEMS.map(({id,icon,label,badge,red})=>{
+        {NAV_ITEMS.map((item)=>{
+          const {id,icon,key,badge,red}=item;
           const a=page===id;
           return(
             <div key={id} onClick={()=>setPage(id)} style={{display:"flex",alignItems:"center",gap:9,padding:"9px 11px",borderRadius:11,marginBottom:2,fontSize:12,fontWeight:a?600:500,color:a?"#fff":"rgba(255,255,255,.45)",background:a?"rgba(255,255,255,.09)":"transparent",cursor:"pointer",transition:"all .15s",borderLeft:`3px solid ${a?ac:"transparent"}`,paddingLeft:a?"11px":"14px"}} onMouseEnter={e=>{if(!a)e.currentTarget.style.background="rgba(255,255,255,.04)"}} onMouseLeave={e=>{if(!a)e.currentTarget.style.background="transparent"}}>
               <span style={{fontSize:15}}>{icon}</span>
-              <span style={{flex:1}}>{label}</span>
+              <span style={{flex:1}}>{tt(item.key,lang)}</span>
               {badge&&<span style={{background:red?"#e53e3e":"rgba(255,255,255,.12)",color:"#fff",borderRadius:100,padding:"1px 7px",fontSize:9,fontWeight:700}}>{badge}</span>}
             </div>
           );
@@ -1222,6 +1247,11 @@ export default function IndustryDashboard(){
   const [page,setPage]=useState("dashboard");
   const [tenders,setTenders]=useState([]);
   const [bids,setBids]=useState([]);
+  const [lang,setLang]=useState(()=>{
+    if(typeof window!=="undefined") return localStorage.getItem("grainos_lang")||"en";
+    return "en";
+  });
+  const handleSetLang=(l)=>{setLang(l);if(typeof window!=="undefined")localStorage.setItem("grainos_lang",l);};
 
   const renderPage=()=>{
     switch(page){
@@ -1244,7 +1274,7 @@ export default function IndustryDashboard(){
       <div style={{display:"flex",flexDirection:"column",minHeight:"100vh"}}>
         <TickerBar/>
         <div style={{display:"flex",flex:1}}>
-          <Sidebar page={page} setPage={setPage}/>
+          <Sidebar page={page} setPage={setPage} lang={lang} setLang={handleSetLang}/>
           <div style={{marginLeft:224,flex:1,display:"flex",flexDirection:"column",minHeight:"100vh",background:"#eef2e8"}}>
             {renderPage()}
           </div>
