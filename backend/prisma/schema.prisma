@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  FARMER
+  INDUSTRY
+  ADMIN
+}
+
+enum TenderStatus {
+  OPEN
+  CLOSED
+  AWARDED
+}
+
+model User {
+  id             String    @id @default(uuid())
+  role           Role
+  name           String
+  phone          String    @unique
+  email          String?   @unique
+  password_hash  String?
+  verified_status Boolean  @default(false)
+  created_at     DateTime  @default(now())
+
+  farmerProfile  FarmerProfile?
+  industryProfile IndustryProfile?
+  sentMessages   Message[]  @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+}
+
+model FarmerProfile {
+  id           String   @id @default(uuid())
+  user_id      String   @unique
+  land_size    Float?
+  location     String
+  documents_url String[]
+  user         User     @relation(fields: [user_id], references: [id])
+  produce      Produce[]
+}
+
+model IndustryProfile {
+  id           String   @id @default(uuid())
+  user_id      String   @unique
+  business_name String
+  gst_number   String?
+  sector       String
+  user         User     @relation(fields: [user_id], references: [id])
+  tenders      Tender[]
+}
+
+model Produce {
+  id            String   @id @default(uuid())
+  farmer_id     String
+  crop_type     String
+  quantity      Float
+  price         Float
+  images_url    String[]
+  harvest_date  DateTime
+  quality_grade String
+  location      String
+  created_at    DateTime @default(now())
+  farmer        FarmerProfile @relation(fields: [farmer_id], references: [id])
+}
+
+model Tender {
+  id                String       @id @default(uuid())
+  industry_id       String
+  crop_type         String
+  required_quantity Float
+  budget            Float
+  deadline          DateTime
+  status            TenderStatus @default(OPEN)
+  created_at        DateTime     @default(now())
+  industry          IndustryProfile @relation(fields: [industry_id], references: [id])
+  bids              Bid[]
+}
+
+model Bid {
+  id         String   @id @default(uuid())
+  tender_id  String
+  farmer_id  String
+  price      Float
+  quantity   Float
+  note       String?
+  created_at DateTime @default(now())
+  tender     Tender   @relation(fields: [tender_id], references: [id])
+}
+
+model Message {
+  id                 String   @id @default(uuid())
+  sender_id          String
+  receiver_id        String
+  message            String
+  translated_message String?
+  timestamp          DateTime @default(now())
+  sender             User     @relation("SentMessages", fields: [sender_id], references: [id])
+  receiver           User     @relation("ReceivedMessages", fields: [receiver_id], references: [id])
+}
+
+model Review {
+  id          String   @id @default(uuid())
+  reviewer_id String
+  reviewee_id String
+  rating      Int
+  comment     String?
+  created_at  DateTime @default(now())
+}

@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "tailwindCSS.experimental.classRegex": [["className\\s*=\\s*`([^`]*)`", "[\"'`]([^\"'`]*)[\"'`]"]],
+  "files.associations": { "*.css": "tailwindcss" },
+  "editor.quickSuggestions": { "strings": "on" }
+}

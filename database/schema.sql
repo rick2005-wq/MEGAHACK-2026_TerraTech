@@ -1,0 +1,11 @@
+-- GrainOS PostgreSQL Schema (reference — managed via Prisma)
+-- See backend/prisma/schema.prisma for the source of truth
+
+-- Users: FARMER | INDUSTRY | ADMIN
+-- FarmerProfiles: land info, documents
+-- IndustryProfiles: business info
+-- Produce: crop listings by farmers
+-- Tenders: procurement requests by industries
+-- Bids: farmer responses to tenders
+-- Messages: chat messages with optional AI translation
+-- Reviews: ratings between parties
