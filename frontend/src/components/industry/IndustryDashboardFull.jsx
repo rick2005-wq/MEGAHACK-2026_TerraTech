@@ -40,6 +40,33 @@ const TT={
   analytics:     {en:"Analytics",hi:"विश्लेषण",mr:"विश्लेषण",pa:"ਵਿਸ਼ਲੇਸ਼ਣ",gu:"વિશ્લેષણ",ta:"பகுப்பாய்வு",te:"విశ్లేషణలు",kn:"ವಿಶ್ಲೇಷಣೆ",bn:"বিশ্লেষণ",ar:"التحليلات"},
   settings:      {en:"Settings",hi:"सेटिंग्स",mr:"सेटिंग्ज",pa:"ਸੈਟਿੰਗਜ਼",gu:"સેટિંગ્સ",ta:"அமைப்புகள்",te:"సెట్టింగులు",kn:"ಸೆಟ್ಟಿಂಗ್‌ಗಳు",bn:"সেটিংস",ar:"الإعدادات"},
   language:      {en:"Language",hi:"भाषा",mr:"भाषा",pa:"ਭਾਸ਼ਾ",gu:"ભાષા",ta:"மொழி",te:"భాష",kn:"ಭಾಷೆ",bn:"ভাষা",ar:"اللغة"},
+  goodMorning:   {en:"Good morning, Sourcing Team 🏭",hi:"शुभ प्रभात, सोर्सिंग टीम 🏭",mr:"शुभ सकाळ, सोर्सिंग टीम 🏭",pa:"ਸ਼ੁਭ ਸਵੇਰ, ਸੋਰਸਿੰਗ ਟੀਮ 🏭",gu:"શુભ સવાર, સોર્સિંગ ટીમ 🏭",ta:"காலை வணக்கம், சோர்சிங் டீம் 🏭",te:"శుభోదయం, సోర్సింగ్ టీమ్ 🏭",kn:"ಶುಭ ಬೆಳಗು, ಸೋರ್ಸಿಂಗ್ ಟೀಮ್ 🏭",bn:"শুভ সকাল, সোর্সিং টিম 🏭",ar:"صباح الخير، فريق التوريد 🏭"},
+  q4phase:       {en:"GrainOS Industry Portal · Q4 Procurement",hi:"GrainOS उद्योग पोर्टल · Q4 खरीद",mr:"GrainOS उद्योग पोर्टल · Q4 खरेदी",pa:"GrainOS ਉਦਯੋਗ ਪੋਰਟਲ · Q4 ਖਰੀਦ",gu:"GrainOS ઉદ્યોગ પોર્ટલ · Q4 ખરીદ",ta:"GrainOS தொழில் போர்டல் · Q4 கொள்முதல்",te:"GrainOS పోర్టల్ · Q4 సేకరణ",kn:"GrainOS ಪೋರ್ಟಲ್ · Q4 ಖರೀದಿ",bn:"GrainOS পোর্টাল · Q4 সংগ্রহ",ar:"بوابة GrainOS · Q4 مشتريات"},
+  totalSpent:    {en:"Total Spent YTD",hi:"कुल खर्च YTD",mr:"एकूण खर्च YTD",pa:"ਕੁੱਲ ਖਰਚ YTD",gu:"કુલ ખર્ચ YTD",ta:"மொத்த செலவு YTD",te:"మొత్తం ఖర్చు YTD",kn:"ಒಟ್ಟು ವೆಚ್ಚ YTD",bn:"মোট ব্যয় YTD",ar:"إجمالي الإنفاق"},
+  activeTenders: {en:"Active Tenders",hi:"सक्रिय टेंडर",mr:"सक्रिय टेंडर",pa:"ਸਰਗਰਮ ਟੈਂਡਰ",gu:"સક્રિય ટેન્ડર",ta:"செயலில் டெண்டர்கள்",te:"చురుకైన టెండర్లు",kn:"ಸಕ್ರಿಯ ಟೆಂಡರ್‌ಗಳು",bn:"সক্রিয় টেন্ডার",ar:"المناقصات النشطة"},
+  newBidsLbl:    {en:"New Bids",hi:"नई बोलियाँ",mr:"नवीन बोली",pa:"ਨਵੀਆਂ ਬੋਲੀਆਂ",gu:"નવી બોલીઓ",ta:"புதிய ஏலங்கள்",te:"కొత్త బిడ్లు",kn:"ಹೊಸ ಬಿಡ್‌ಗಳು",bn:"নতুন বিড",ar:"عروض جديدة"},
+  pendingDel:    {en:"Pending Deliveries",hi:"लंबित डिलीवरी",mr:"प्रलंबित डिलीव्हरी",pa:"ਬਕਾਇਆ ਡਿਲੀਵਰੀ",gu:"બાકી ડિલિવરી",ta:"நிலுவை டெலிவரி",te:"పెండింగ్ డెలివరీలు",kn:"ಬಾಕಿ ಡೆಲಿವರಿಗಳು",bn:"মুলতবি ডেলিভারি",ar:"التسليمات المعلقة"},
+  liveOnPlatform:{en:"Live on platform",hi:"प्लेटफॉर्म पर लाइव",mr:"प्लॅटफॉर्मवर लाइव",pa:"ਪਲੇਟਫਾਰਮ ਤੇ ਲਾਈਵ",gu:"પ્લેટફોર્મ પર લાઇવ",ta:"தளத்தில் நேரடி",te:"ప్లాట్‌ఫారమ్‌లో లైవ్",kn:"ವೇದಿಕೆಯಲ್ಲಿ ಲೈವ್",bn:"প্ল্যাটফর্মে লাইভ",ar:"مباشر على المنصة"},
+  awaitingResp:  {en:"Awaiting your response",hi:"आपके जवाब का इंतज़ार",mr:"तुमच्या प्रतिसादाची प्रतीक्षा",pa:"ਤੁਹਾਡੇ ਜਵਾਬ ਦੀ ਉਡੀਕ",gu:"તમારા જવાબની રાહ",ta:"உங்கள் பதிலை எதிர்பார்க்கிறோம்",te:"మీ స్పందన కోసం వేచి ఉంది",kn:"ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಗಾಗಿ ನಿರೀಕ್ಷಿಸುತ್ತಿದೆ",bn:"আপনার সাড়ার অপেক্ষায়",ar:"في انتظار ردك"},
+  inTransit:     {en:"₹14.2L in transit",hi:"₹14.2L ट्रांज़िट में",mr:"₹14.2L ट्रांझिटमध्ये",pa:"₹14.2L ਟਰਾਂਜ਼ਿਟ ਵਿੱਚ",gu:"₹14.2L ટ્રાન્ઝિટ",ta:"₹14.2L போக்குவரத்தில்",te:"₹14.2L రవాణాలో",kn:"₹14.2L ಸಾಗಣೆಯಲ್ಲಿ",bn:"₹14.2L ট্রানজিটে",ar:"₹14.2L في العبور"},
+  incomingBids:  {en:"Incoming Bids",hi:"आने वाली बोलियाँ",mr:"येणारी बोली",pa:"ਆਉਣ ਵਾਲੀਆਂ ਬੋਲੀਆਂ",gu:"આવતી બોલીઓ",ta:"வரும் ஏலங்கள்",te:"వచ్చే బిడ్లు",kn:"ಬರುವ ಬಿಡ್‌ಗಳು",bn:"আসছে বিড",ar:"العروض الواردة"},
+  allBidsLink:   {en:"All bids →",hi:"सभी बोलियाँ →",mr:"सर्व बोली →",pa:"ਸਭ ਬੋਲੀਆਂ →",gu:"બધી બોલીઓ →",ta:"அனைத்து ஏலங்கள் →",te:"అన్ని బిడ్లు →",kn:"ಎಲ್ಲಾ ಬಿಡ್‌ಗಳು →",bn:"সব বিড →",ar:"جميع العروض →"},
+  noBidsYet:     {en:"No bids yet. Float a tender to receive bids!",hi:"अभी बोलियाँ नहीं। टेंडर पोस्ट करें!",mr:"अजून बोली नाही. टेंडर पोस्ट करा!",pa:"ਅਜੇ ਬੋਲੀਆਂ ਨਹੀਂ। ਟੈਂਡਰ ਪੋਸਟ ਕਰੋ!",gu:"હજી બોલીઓ નથી. ટેન્ડર ફ્લોટ કરો!",ta:"இன்னும் ஏலங்கள் இல்லை. டெண்டர் போடுங்கள்!",te:"ఇంకా బిడ్లు లేవు. టెండర్ పోస్ట్ చేయండి!",kn:"ಇನ್ನೂ ಬಿಡ್‌ಗಳಿಲ್ಲ. ಟೆಂಡರ್ ಪೋಸ್ಟ್ ಮಾಡಿ!",bn:"এখনো বিড নেই। টেন্ডার ফ্লোট করুন!",ar:"لا عروض بعد. أضف مناقصة!"},
+  topFarmers:    {en:"Top Farmers",hi:"शीर्ष किसान",mr:"अव्वल शेतकरी",pa:"ਚੋਟੀ ਦੇ ਕਿਸਾਨ",gu:"ટોચના ખેડૂત",ta:"சிறந்த விவசாயிகள்",te:"అగ్రశ్రేణి రైతులు",kn:"ಅಗ್ರ ರೈತರು",bn:"শীর্ষ কৃষক",ar:"أفضل المزارعين"},
+  viewAllFarmers:{en:"View All Farmers →",hi:"सभी किसान देखें →",mr:"सर्व शेतकरी पहा →",pa:"ਸਭ ਕਿਸਾਨ ਦੇਖੋ →",gu:"બધા ખેડૂત જુઓ →",ta:"அனைத்து விவசாயிகளையும் பார்க்கவும் →",te:"అందరు రైతులను చూడండి →",kn:"ಎಲ್ಲಾ ರೈತರನ್ನು ನೋಡಿ →",bn:"সব কৃষক দেখুন →",ar:"عرض جميع المزارعين →"},
+  manageAll:     {en:"Manage all →",hi:"सब प्रबंधित करें →",mr:"सर्व व्यवस्थापित करा →",pa:"ਸਭ ਪ੍ਰਬੰਧਿਤ ਕਰੋ →",gu:"બધું સંચાલિત કરો →",ta:"அனைத்தும் நிர்வகிக்கவும் →",te:"అన్నీ నిర్వహించు →",kn:"ಎಲ್ಲವನ್ನೂ ನಿರ್ವಹಿಸಿ →",bn:"সব পরিচালনা করুন →",ar:"إدارة الكل →"},
+  noTendersYet:  {en:"No tenders yet.",hi:"अभी कोई टेंडर नहीं।",mr:"अजून टेंडर नाही.",pa:"ਅਜੇ ਕੋਈ ਟੈਂਡਰ ਨਹੀਂ।",gu:"હજી ટેન્ડર નથી.",ta:"இன்னும் டெண்டர்கள் இல்லை.",te:"ఇంకా టెండర్లు లేవు.",kn:"ಇನ್ನೂ ಟೆಂಡರ್‌ಗಳಿಲ್ಲ.",bn:"এখনো টেন্ডার নেই.",ar:"لا توجد مناقصات بعد."},
+  compareBtn:    {en:"⚖️ Compare Farmers",hi:"⚖️ किसानों की तुलना",mr:"⚖️ शेतकऱ्यांची तुलना",pa:"⚖️ ਕਿਸਾਨਾਂ ਦੀ ਤੁਲਨਾ",gu:"⚖️ ખેડૂતો સરખામણી",ta:"⚖️ விவசாயிகளை ஒப்பிடுக",te:"⚖️ రైతులను పోల్చండి",kn:"⚖️ ರೈತರನ್ನು ಹೋಲಿಸಿ",bn:"⚖️ কৃষকদের তুলনা",ar:"⚖️ مقارنة المزارعين"},
+  floatTender:   {en:"+ Float Tender",hi:"+ टेंडर फ्लोट करें",mr:"+ टेंडर फ्लोट करा",pa:"+ ਟੈਂਡਰ ਫਲੋਟ ਕਰੋ",gu:"+ ટેન્ડર ફ્લોટ",ta:"+ டெண்டர் போடுங்கள்",te:"+ టెండర్ ఫ్లోట్",kn:"+ ಟೆಂಡರ್ ಫ್ಲೋಟ್",bn:"+ টেন্ডার ফ্লোট করুন",ar:"+ طرح مناقصة"},
+  postTender:    {en:"+ Float New Tender",hi:"+ नया टेंडर फ्लोट करें",mr:"+ नवीन टेंडर फ्लोट करा",pa:"+ ਨਵਾਂ ਟੈਂਡਰ ਫਲੋਟ ਕਰੋ",gu:"+ નવો ટેન્ડર ફ્લોટ",ta:"+ புதிய டெண்டர் போடு",te:"+ కొత్త టెండర్ ఫ్లోట్",kn:"+ ಹೊಸ ಟೆಂಡರ್ ಫ್ಲೋಟ್",bn:"+ নতুন টেন্ডার ফ্লোট",ar:"+ طرح مناقصة جديدة"},
+  shortlist:     {en:"⭐ Shortlist",hi:"⭐ शॉर्टलिस्ट",mr:"⭐ शॉर्टलिस्ट",pa:"⭐ ਸ਼ੌਰਟਲਿਸਟ",gu:"⭐ શૉર્ટલિસ્ટ",ta:"⭐ தேர்ந்தெடு",te:"⭐ షార్ట్‌లిస్ట్",kn:"⭐ ಆಯ್ಕೆಪಟ್ಟಿ",bn:"⭐ শর্টলিস্ট",ar:"⭐ إدراج في القائمة"},
+  awardContract: {en:"🏆 Award Contract",hi:"🏆 अनुबंध प्रदान करें",mr:"🏆 करार द्या",pa:"🏆 ਠੇਕਾ ਦਿਓ",gu:"🏆 કોન્ટ્રેક્ટ આપો",ta:"🏆 ஒப்பந்தம் வழங்கவும்",te:"🏆 కాంట్రాక్ట్ ఇవ్వండి",kn:"🏆 ಒಪ್ಪಂದ ನೀಡಿ",bn:"🏆 চুক্তি প্রদান করুন",ar:"🏆 منح العقد"},
+  browseProduce: {en:"Browse Listings 🔍",hi:"लिस्टिंग ब्राउज़ करें 🔍",mr:"लिस्टिंग ब्राउझ करा 🔍",pa:"ਲਿਸਟਿੰਗ ਬ੍ਰਾਊਜ਼ ਕਰੋ 🔍",gu:"લિસ્ટિંગ બ્રાઉઝ 🔍",ta:"பட்டியல்களை உலாவுக 🔍",te:"జాబితాలు చూడండి 🔍",kn:"ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ 🔍",bn:"তালিকা দেখুন 🔍",ar:"تصفح القوائم 🔍"},
+  searchProduce: {en:"Search produce, farmer or location…",hi:"फसल, किसान या स्थान खोजें…",mr:"पीक, शेतकरी किंवा स्थान शोधा…",pa:"ਫਸਲ, ਕਿਸਾਨ ਜਾਂ ਸਥਾਨ ਖੋਜੋ…",gu:"ઉપજ, ખેડૂત ખોજો…",ta:"விளைபொருள், விவசாயி தேடுங்கள்…",te:"పంట, రైతు వెతకండి…",kn:"ಬೆಳೆ, ರೈತ ಹುಡುಕಿ…",bn:"ফসল, কৃষক খুঁজুন…",ar:"ابحث عن منتج أو مزارع…"},
+  cancel:        {en:"Cancel",hi:"रद्द करें",mr:"रद्द करा",pa:"ਰੱਦ ਕਰੋ",gu:"રદ કરો",ta:"ரத்து செய்",te:"రద్దు చేయి",kn:"ರದ್ದುಮಾಡಿ",bn:"বাতিল করুন",ar:"إلغاء"},
+  save:          {en:"Save",hi:"सहेजें",mr:"जतन करा",pa:"ਸੇਵ ਕਰੋ",gu:"સેવ",ta:"சேமி",te:"సేవ్",kn:"ಉಳಿಸಿ",bn:"সেভ",ar:"حفظ"},
+  vsLastYear:    {en:"↑ +22% vs last year",hi:"↑ +22% पिछले साल से",mr:"↑ +22% गेल्या वर्षापेक्षा",pa:"↑ +22% ਪਿਛਲੇ ਸਾਲ ਨਾਲੋਂ",gu:"↑ +22% ગત વર્ષ કરતાં",ta:"↑ +22% கடந்த ஆண்டை விட",te:"↑ +22% గత సంవత్సరం కంటే",kn:"↑ +22% ಕಳೆದ ವರ್ಷಕ್ಕಿಂತ",bn:"↑ +22% গত বছরের তুলনায়",ar:"↑ +22% مقارنة بالعام الماضي"},
+  compareArrow:  {en:"Compare →",hi:"तुलना →",mr:"तुलना →",pa:"ਤੁਲਨਾ →",gu:"સરખામણી →",ta:"ஒப்பிடு →",te:"పోల్చు →",kn:"ಹೋಲಿಸಿ →",bn:"তুলনা →",ar:"قارن →"},
 };
 const tt=(key,lang)=>TT[key]?.[lang]||TT[key]?.en||key;
 
@@ -168,15 +195,15 @@ function TickerBar(){
 
 /* ─── NAV ─── */
 const NAV_ITEMS=[
-  {id:"dashboard",icon:"🏠",label:"Dashboard"},
-  {id:"browse",icon:"🔍",label:"Browse Listings"},
-  {id:"tenders",icon:"📋",label:"My Tenders"},
-  {id:"bids",icon:"🤝",label:"Bids Received",red:true},
-  {id:"farmers",icon:"👨‍🌾",label:"My Farmers"},
-  {id:"messages",icon:"💬",label:"Messages",red:true},
-  {id:"payments",icon:"💰",label:"Payments"},
-  {id:"analytics",icon:"📊",label:"Analytics"},
-  {id:"settings",icon:"⚙️",label:"Settings"},
+  {id:"dashboard",icon:"🏠",key:"dashboard",label:"Dashboard"},
+  {id:"browse",   icon:"🔍",key:"browse",   label:"Browse Listings"},
+  {id:"tenders",  icon:"📋",key:"tenders",  label:"My Tenders"},
+  {id:"bids",     icon:"🤝",key:"bids",     label:"Bids Received",  badge:null,red:true},
+  {id:"farmers",  icon:"👨‍🌾",key:"farmers",  label:"My Farmers"},
+  {id:"messages", icon:"💬",key:"messages", label:"Messages",       badge:null,red:true},
+  {id:"payments", icon:"💰",key:"payments", label:"Payments"},
+  {id:"analytics",icon:"📊",key:"analytics",label:"Analytics"},
+  {id:"settings", icon:"⚙️",key:"settings", label:"Settings"},
 ];
 
 function Sidebar({page,setPage,lang,setLang}){
@@ -206,7 +233,7 @@ function Sidebar({page,setPage,lang,setLang}){
           return(
             <div key={id} onClick={()=>setPage(id)} style={{display:"flex",alignItems:"center",gap:9,padding:"9px 11px",borderRadius:11,marginBottom:2,fontSize:12,fontWeight:a?600:500,color:a?"#fff":"rgba(255,255,255,.45)",background:a?"rgba(255,255,255,.09)":"transparent",cursor:"pointer",transition:"all .15s",borderLeft:`3px solid ${a?ac:"transparent"}`,paddingLeft:a?"11px":"14px"}} onMouseEnter={e=>{if(!a)e.currentTarget.style.background="rgba(255,255,255,.04)"}} onMouseLeave={e=>{if(!a)e.currentTarget.style.background="transparent"}}>
               <span style={{fontSize:15}}>{icon}</span>
-              <span style={{flex:1}}>{tt(item.key,lang)}</span>
+              <span style={{flex:1,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{tt(item.key,lang)||item.label}</span>
               {badge&&<span style={{background:red?"#e53e3e":"rgba(255,255,255,.12)",color:"#fff",borderRadius:100,padding:"1px 7px",fontSize:9,fontWeight:700}}>{badge}</span>}
             </div>
           );
@@ -280,7 +307,7 @@ function FloatTenderModal({onClose,onDone}){
           </div>
           <Field label="Preferred Grade" type="select" opts={["Grade A (Premium)","Grade B (Standard)","Any Grade"]} value={form.grade} onChange={v=>set("grade",v)}/>
           <div style={{display:"flex",justifyContent:"flex-end",gap:10,marginTop:4}}>
-            <button onClick={onClose} style={ghBtn({fontSize:12})}>Cancel</button>
+            <button onClick={onClose} style={ghBtn({fontSize:12})}>{tt("cancel",lang)}</button>
             <button onClick={()=>setStep(2)} disabled={!form.qty} style={{...gBtn({fontSize:12,opacity:form.qty?1:0.5})}}>Next →</button>
           </div>
         </>
@@ -460,7 +487,7 @@ function ProduceDetailModal({item,onClose}){
         <Field label="Quantity You Need *" placeholder="e.g. 500 kg" value={bidQty} onChange={setBidQty}/>
       </div>
       <div style={{display:"flex",gap:10}}>
-        <button onClick={onClose} style={ghBtn({flex:1})}>Cancel</button>
+        <button onClick={onClose} style={ghBtn({flex:1})}>{tt("cancel",lang)}</button>
         <button onClick={()=>bidAmt&&bidQty&&setSent(true)} disabled={!bidAmt||!bidQty} style={{...gBtn({flex:2,padding:12,opacity:bidAmt&&bidQty?1:0.5})}}>Send Bid →</button>
       </div>
     </>
@@ -518,10 +545,10 @@ function BidDetailModal({bid,onClose,onAct}){
       {/* Actions */}
       {bid.status!=="awarded"&&bid.status!=="declined"&&<div style={{display:"flex",gap:10}}>
         <button onClick={()=>{onAct(bid.id,"declined");onClose();}} style={{...ghBtn({flex:1,color:"#991b1b",background:"#fee2e2",border:"none"})}}>✕ Decline</button>
-        {bid.status==="new"&&<button onClick={()=>{onAct(bid.id,"shortlisted");onClose();}} style={ghBtn({flex:1})}>⭐ Shortlist</button>}
-        <button onClick={()=>setAccepted(true)} style={gBtn({flex:2,padding:12})}>🏆 Award Contract</button>
+        {bid.status==="new"&&<button onClick={()=>{onAct(bid.id,"shortlisted");onClose();}} style={ghBtn({flex:1})}>⭐ {tt("shortlist",lang)}</button>}
+        <button onClick={()=>setAccepted(true)} style={gBtn({flex:2,padding:12})}>🏆 {tt("awardContract",lang)}</button>
       </div>}
-      {bid.status==="shortlisted"&&<button onClick={()=>setAccepted(true)} style={{...gBtn({width:"100%",padding:12,fontSize:14})}}>🏆 Award Contract</button>}
+      {bid.status==="shortlisted"&&<button onClick={()=>setAccepted(true)} style={{...gBtn({width:"100%",padding:12,fontSize:14})}}>🏆 {tt("awardContract",lang)}</button>}
     </>
   );
 }
@@ -529,7 +556,7 @@ function BidDetailModal({bid,onClose,onAct}){
 /* ═══════════════════════════════════════════════════════════
    PRODUCE LISTING DETAIL + BID MODAL
 ═══════════════════════════════════════════════════════════ */
-function PageDashboard({setPage,tenders,bids,setBids}){
+function PageDashboard({setPage,tenders,bids,setBids,lang="en"}){
   const [showFloat,setShowFloat]=useState(false);
   const [showCompare,setShowCompare]=useState(false);
   const newBids=bids.filter(b=>b.status==="new");
@@ -616,7 +643,7 @@ function PageDashboard({setPage,tenders,bids,setBids}){
               </div>
             ))}
           </div>
-          <button onClick={()=>setShowFloat(true)} style={{width:"100%",marginTop:12,padding:"10px",borderRadius:12,border:`2px dashed #c5d9b8`,background:"transparent",color:gm,fontWeight:600,fontSize:12,cursor:"pointer"}}>+ Float New Tender</button>
+          <button onClick={()=>setShowFloat(true)} style={{width:"100%",marginTop:12,padding:"10px",borderRadius:12,border:`2px dashed #c5d9b8`,background:"transparent",color:gm,fontWeight:600,fontSize:12,cursor:"pointer"}}>{tt("postTender",lang)}</button>
         </div>
       </div>
       {showFloat&&<Modal onClose={()=>setShowFloat(false)} w={580}><FloatTenderModal onClose={()=>setShowFloat(false)} onDone={async(form)=>{
@@ -634,7 +661,7 @@ function PageDashboard({setPage,tenders,bids,setBids}){
 /* ═══════════════════════════════════════════════════════════
    PAGE: BROWSE LISTINGS
 ═══════════════════════════════════════════════════════════ */
-function PageBrowse(){
+function PageBrowse({lang="en"}){
   const [search,setSearch]=useState("");
   const [detail,setDetail]=useState(null);
   const [bidSent,setBidSent]=useState({});
@@ -681,7 +708,7 @@ function PageBrowse(){
 /* ═══════════════════════════════════════════════════════════
    PAGE: MY TENDERS  ✅ SUPABASE WIRED
 ═══════════════════════════════════════════════════════════ */
-function PageTenders({tenders,setTenders}){
+function PageTenders({tenders,setTenders,lang="en"}){
   const [showFloat,setShowFloat]=useState(false);
   const [tab,setTab]=useState("open");
   const [loading,setLoading]=useState(true);
@@ -743,7 +770,7 @@ function PageTenders({tenders,setTenders}){
             <button key={t} onClick={()=>setTab(t)} style={{padding:"6px 14px",borderRadius:9,border:"none",fontSize:11,fontWeight:600,cursor:"pointer",background:tab===t?"#fff":"transparent",color:tab===t?gd:"#9ca3af",textTransform:"capitalize",transition:"all .12s"}}>{t}</button>
           ))}
         </div>
-        <button onClick={()=>setShowFloat(true)} style={gBtn({padding:"8px 16px",fontSize:12})}>+ Float New Tender</button>
+        <button onClick={()=>setShowFloat(true)} style={gBtn({padding:"8px 16px",fontSize:12})}>{tt("postTender",lang)}</button>
       </>}/>
       <div style={{padding:"22px 28px"}} className="fu">
         {loading&&<div style={{textAlign:"center",padding:"40px 0",color:"#9ca3af",fontSize:14}}>⏳ Loading tenders from database…</div>}
@@ -806,7 +833,7 @@ function PageTenders({tenders,setTenders}){
 /* ═══════════════════════════════════════════════════════════
    PAGE: BIDS RECEIVED  (Supabase version)
 ═══════════════════════════════════════════════════════════ */
-function PageBids({bids,setBids}){
+function PageBids({bids,setBids,lang="en"}){
   const [tab,setTab]=useState("all");
   const [detail,setDetail]=useState(null);
   const [search,setSearch]=useState("");
@@ -888,8 +915,8 @@ function PageBids({bids,setBids}){
               {(b.status==="new"||b.status==="shortlisted")&&(
                 <div style={{display:"flex",gap:8}} onClick={e=>e.stopPropagation()}>
                   <button onClick={()=>act(b.id,"declined")} style={{...ghBtn({flex:1,padding:"8px 0",fontSize:11}),color:"#991b1b",background:"#fee2e2",border:"none"}}>✕ Decline</button>
-                  {b.status==="new"&&<button onClick={()=>act(b.id,"shortlisted")} style={ghBtn({flex:1,padding:"8px 0",fontSize:11})}>⭐ Shortlist</button>}
-                  <button onClick={()=>act(b.id,"awarded")} style={gBtn({flex:2,padding:"8px 0",fontSize:11})}>🏆 Award Contract</button>
+                  {b.status==="new"&&<button onClick={()=>act(b.id,"shortlisted")} style={ghBtn({flex:1,padding:"8px 0",fontSize:11})}>⭐ {tt("shortlist",lang)}</button>}
+                  <button onClick={()=>act(b.id,"awarded")} style={gBtn({flex:2,padding:"8px 0",fontSize:11})}>🏆 {tt("awardContract",lang)}</button>
                 </div>
               )}
               {b.status==="awarded"&&<div style={{padding:"8px 12px",borderRadius:9,background:"#f0f7f0",textAlign:"center",fontSize:12,fontWeight:700,color:gm}}>🏆 Contract Awarded</div>}
@@ -906,7 +933,7 @@ function PageBids({bids,setBids}){
 /* ═══════════════════════════════════════════════════════════
    PAGE: MESSAGES  (Supabase version)
 ═══════════════════════════════════════════════════════════ */
-function PageFarmers(){
+function PageFarmers({lang="en"}){
   const [profile,setProfile]=useState(null);
   const [search,setSearch]=useState("");
   const [invited,setInvited]=useState({1:true,2:true,4:true});
@@ -981,7 +1008,7 @@ const FIXED_CONTACTS=[
   {id:"00000000-0000-0000-0000-000000000003",name:"Britannia Industries",e:"🏭",preview:"",time:"",unread:0,online:false},
 ];
 
-function PageMessages(){
+function PageMessages({lang="en"}){
   const [activeId,setActiveId]=useState(DEMO_FARMER_ID);
   const [contacts,setContacts]=useState(FIXED_CONTACTS);
   const [messages,setMessages]=useState([]);
@@ -1096,7 +1123,7 @@ function PageMessages(){
   );
 }
 
-function PagePayments(){
+function PagePayments({lang="en"}){
   const [payments,setPayments]=useState(PAYMENTS);
   const [showPay,setShowPay]=useState(null);
   const [paid,setPaid]=useState({});
@@ -1140,7 +1167,7 @@ function PagePayments(){
           <div style={{display:"flex",justifyContent:"space-between"}}><span style={{fontSize:12,color:"#6b7280"}}>Amount</span><span style={{fontSize:18,fontWeight:800,color:gd}}>{showPay.amount}</span></div>
         </div>
         <div style={{display:"flex",gap:10,marginTop:8}}>
-          <button onClick={()=>setShowPay(null)} style={ghBtn({flex:1})}>Cancel</button>
+          <button onClick={()=>setShowPay(null)} style={ghBtn({flex:1})}>{tt("cancel",lang)}</button>
           <button onClick={()=>{setPaid(p=>({...p,[showPay.id]:true}));setPayments(prev=>prev.map(x=>x.id===showPay.id?{...x,status:"completed"}:x));setShowPay(null);}} style={gBtn({flex:2,padding:12})}>✓ Confirm & Pay</button>
         </div>
       </Modal>}
@@ -1151,7 +1178,7 @@ function PagePayments(){
 /* ═══════════════════════════════════════════════════════════
    PAGE: ANALYTICS
 ═══════════════════════════════════════════════════════════ */
-function PageAnalytics(){
+function PageAnalytics({lang="en"}){
   const mx=Math.max(...ANALYTICS.spend);
   const mo=Math.max(...ANALYTICS.orders);
   return(
@@ -1197,7 +1224,7 @@ function PageAnalytics(){
 /* ═══════════════════════════════════════════════════════════
    PAGE: SETTINGS
 ═══════════════════════════════════════════════════════════ */
-function PageSettings(){
+function PageSettings({lang="en"}){
   const [saved,setSaved]=useState(false);
   const [notif,setNotif]=useState({sms:true,email:true,app:true,bid:true,tender:false});
   const [comp,setComp]=useState({name:"PepsiCo India",gstin:"27AABCS1429B1Z5",email:"sourcing@pepsico.in",phone:"+91 98765 43210",state:"Maharashtra",category:"Food Processing"});
@@ -1234,7 +1261,7 @@ function PageSettings(){
             </div>
           ))}
         </div>
-        <button onClick={()=>setSaved(true)} style={gBtn({padding:"11px 32px",fontSize:13})}>Save Changes</button>
+        <button onClick={()=>setSaved(true)} style={gBtn({padding:"11px 32px",fontSize:13})}>{tt("save",lang)} Changes</button>
       </div>
     </>
   );
@@ -1255,15 +1282,15 @@ export default function IndustryDashboard(){
 
   const renderPage=()=>{
     switch(page){
-      case "dashboard": return <PageDashboard setPage={setPage} tenders={tenders} bids={bids} setBids={setBids}/>;
-      case "browse":    return <PageBrowse/>;
-      case "tenders":   return <PageTenders tenders={tenders} setTenders={setTenders}/>;
-      case "bids":      return <PageBids bids={bids} setBids={setBids}/>;
-      case "farmers":   return <PageFarmers/>;
-      case "messages":  return <PageMessages/>;
-      case "payments":  return <PagePayments/>;
-      case "analytics": return <PageAnalytics/>;
-      case "settings":  return <PageSettings/>;
+      case "dashboard": return <PageDashboard setPage={setPage} tenders={tenders} bids={bids} setBids={setBids} lang={lang}/>;
+      case "browse":    return <PageBrowse lang={lang}/>;
+      case "tenders":   return <PageTenders tenders={tenders} setTenders={setTenders} lang={lang}/>;
+      case "bids":      return <PageBids bids={bids} setBids={setBids} lang={lang}/>;
+      case "farmers":   return <PageFarmers lang={lang}/>;
+      case "messages":  return <PageMessages lang={lang}/>;
+      case "payments":  return <PagePayments lang={lang}/>;
+      case "analytics": return <PageAnalytics lang={lang}/>;
+      case "settings":  return <PageSettings lang={lang}/>;
       default: return null;
     }
   };
