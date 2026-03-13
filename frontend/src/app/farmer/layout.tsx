@@ -191,7 +191,7 @@ function FarmerLayoutInner({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ display: "flex", minHeight: "100vh", background: "#f0f4ec", fontFamily: "'DM Sans', sans-serif" }}>
       <FarmerSidebar />
-      <div style={{ marginLeft: 240, flex: 1, display: "flex", flexDirection: "column" }}>
+      <div style={{ marginLeft: 240, flex: 1, display: "flex", flexDirection: "column", overflowX: "hidden", minWidth: 0, width: "calc(100vw - 240px)" }}>
         <div style={{ background: "#1e4620", padding: "8px 32px", display: "flex", alignItems: "center", gap: 32, overflow: "hidden" }}>
           <span style={{ fontSize: 10, fontWeight: 700, color: "#a3c45c", letterSpacing: 1, textTransform: "uppercase", flexShrink: 0 }}>Live Prices</span>
           <div style={{ display: "flex", gap: 24, animation: "tickerScroll 22s linear infinite" }}>
