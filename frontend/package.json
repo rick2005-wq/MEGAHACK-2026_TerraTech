@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
     "@supabase/supabase-js": "^2.99.1",
     "axios": "^1.6.0",
     "firebase": "^10.0.0",

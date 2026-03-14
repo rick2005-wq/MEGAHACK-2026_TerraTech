@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import AuthCard from "@/components/auth/AuthCard";
@@ -7,7 +7,7 @@ import SecurityRow from "@/components/auth/SecurityRow";
 
 const OTP_LENGTH = 6;
 
-export default function OtpVerifyPage() {
+function OtpVerifyContent() {
   const searchParams = useSearchParams();
   const role = searchParams.get("role") ?? "farmer";
   const dashboardPath = role === "industry" ? "/dashboard" : "/farmer/dashboard";
@@ -101,5 +101,13 @@ export default function OtpVerifyPage() {
         </Link>
       </p>
     </AuthCard>
+  );
+}
+
+export default function OtpVerifyPage() {
+  return (
+    <Suspense fallback={<div style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>Loading...</div>}>
+      <OtpVerifyContent />
+    </Suspense>
   );
 }
